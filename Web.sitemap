@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+<siteMapNode url="~/" title="Home" description="Home">
+  <siteMapNode url="~/Default.aspx" title="Home"
+      description="Go to the homepage" />
+  <siteMapNode url="~/about.aspx" title="About"
+      description="About ReckonLab"/>
+  <siteMapNode url="~/tutorial.aspx" title="Tutorial"  description="Tutorial for using ReckonLab Calculator" />
+    <siteMapNode url="~/Products/Project/ProjectSummary.aspx" title="My Project"  description="Project Variance Calculation" />
+  
+  <siteMapNode url="~/MyProfile.aspx" title="My Profile"
+      description="Log in to this web site" />
+  <siteMapNode url="~/contact.aspx" title="Support"  description="Contact us by email" />
+
+</siteMapNode>
+</siteMap>

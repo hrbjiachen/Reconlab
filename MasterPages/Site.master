@@ -1,0 +1,61 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+<title></title>
+  <meta name="keywords" content="product cost tools, project variance calculator, cloud tools for business" />
+<meta name="description" content=
+"Product costing and calculations of project variance made easy." />
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <a href="default.aspx">
+               <asp:Image ID="Logo" runat="server" ImageURL="~/images/reckon-logo.png" /> </a>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ l<a href="~/account/login.aspx" ID="HeadLoginStatus" runat="server">og In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+          
+            <div class="clear hideSkiplink">
+            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" IncludeStyleBlock="False" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" DynamicEnableDefaultPopOutImage="False"></asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            </div>
+
+        </div>
+        <div class="main">
+            <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath> <br>
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+        
+        Copyright 2013 ReckonLab <br /> Select a Theme 
+        <asp:DropDownList 
+            ID="ThemeList" runat="server" AutoPostBack="True">
+            <asp:ListItem>ThemeGreen</asp:ListItem>
+            <asp:ListItem>ThemeBlue</asp:ListItem>
+        </asp:DropDownList>
+    </div>
+    </form>
+</body>
+</html>

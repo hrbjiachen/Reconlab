@@ -1,0 +1,6 @@
+SELECT ProjectName, ProjectBudget AS [Budget at completion
+		Budget at Completion], MoneySpent AS [Actual Cost], ProjectBudget * PercentageComplete AS [Earned value], ProjectBudget * PlannedPercentageComplete AS [Planned value], ProjectBudget * PercentageComplete - MoneySpent AS [Cost variance], ProjectBudget * PercentageComplete - ProjectBudget * PlannedPercentageComplete AS [Schedule variance], ProjectBudget * PercentageComplete / MoneySpent AS [Cost performance index], (ProjectBudget * PercentageComplete) / (ProjectBudget * PlannedPercentageComplete) AS [Schedule performance index] FROM ProjectVariances WHERE (ProjectID = @ProjectID)
+
+Protected Sub DetailsView1_ItemUpdated(sender As Object, e As System.Web.UI.WebControls.DetailsViewUpdatedEventArgs) Handles DetailsView1.ItemUpdated
+        DetailsView2.DataBind()
+    End Sub
